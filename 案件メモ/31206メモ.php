@@ -1,0 +1,25 @@
+<?php
+$ab_srch_area = '';
+if($tas31206 == 'b'){
+	$ab_srch_area = 'is-fill';
+}
+
+
+/*
+振り分け
+htdocs/index.html
+
+メインヘッダー
+htdocs/common/include/global_navi_B.php
+onamaeGlobal .is-bで切り替え
+
+検索エリアmhtdocs/common/include/top_campArea_default.php
+
+
+maw:1080px
+*/
+
+?>
+
+<?php if($tas31206 == 'b'){ echo 'is-b' ;} ?>
+git commit -m "30206 サイトカタリストにｃが残りっぱなしだったのを削除"
