@@ -32,16 +32,25 @@ var isProcess = false;
   ・ gulp.dest(path) => 整形されたSCSSを保存
 
 */
-gulp.task('scssFormat', function() {
-  return gulp.src(pathObj.changedScssSrc)
-    .pipe(plumber())
-    .pipe(postcss([
-      stylelint({fix: true}),
-      postcssReporter({clearAllMessages: true})],
-      {syntax: postcssScss})
-    )
-    .pipe(gulp.dest(pathObj.changedScssDir));
+// gulp.task('scssFormat', function() {
+//   return gulp.src(pathObj.changedScssSrc)
+//     .pipe(plumber())
+//     .pipe(postcss([
+//       stylelint({fix: true}),
+//       postcssReporter({clearAllMessages: true})],
+//       {syntax: postcssScss})
+//     )
+//     .pipe(gulp.dest(pathObj.changedScssDir));
+// });
+
+gulp.task('scssFormat', function(){
+	
 });
+
+
+
+
+
 
 /*
 
@@ -57,44 +66,26 @@ gulp.task('scssFormat', function() {
   ・ gulp.dest(path) => コンパイルされたCSSを保存
 
 */
-gulp.task('scss',['scssFormat'], function() {
-  isProcess = true;
-  return gulp.src(pathObj.parentScssSrc)
-    .pipe(plumber())
-    .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'compressed'}))
-    .on('error', function(e) {
-      console.log('エラー : '+e.line+' '+ e.file);
-    })
-    .pipe(postcss([
-        autoprefixer({
-            browsers: ['last 2 version']
-          }
-        )
-      ])
-    )
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(pathObj.destDir));
-});
+// gulp.task('scss',['scssFormat'], function() {
+//   isProcess = true;
+//   return gulp.src(pathObj.parentScssSrc)
+//     .pipe(plumber())
+//     .pipe(sourcemaps.init())
+//     .pipe(sass({outputStyle: 'compressed'}))
+//     .on('error', function(e) {
+//       console.log('エラー : '+e.line+' '+ e.file);
+//     })
+//     .pipe(postcss([
+//         autoprefixer({
+//             browsers: ['last 2 version']
+//           }
+//         )
+//       ])
+//     )
+//     .pipe(sourcemaps.write('.'))
+//     .pipe(gulp.dest(pathObj.destDir));
+// });
 
-/*
-
-  ブラウザの自動更新
-
-  ・ proxy => 自動更新したいURLを gulp watch と一緒に設定。オプションには "--proxy" を使用
-              例）gulp watch --proxy css.regulation.com.local:58075
-  ・ files => 変更を監視するファイルを記載（ ! から始まるファイルは監視対象外）
-
-*/
-gulp.task('browserSyncInit', function() {
-    var argv = minimist(process.argv.slice(2));
-    if(argv.proxy != undefined && argv.proxy !=true){
-      browserSync.init({
-        proxy :argv.proxy,
-        files: ["./**/*.{html,php,scss,css,js,png,jpg}","!./**/gulpfile.js"]
-     });
-    }
-});
 
 /*
 
@@ -106,30 +97,30 @@ gulp.task('browserSyncInit', function() {
 
 */
 
-gulp.task('watch',['browserSyncInit'], function(e) {
-     return watch('htdocs/**/*.scss',{ ignoreInitial: true },function(){isProcess = false;})
-      .on('change',function(file){
-        pathObj.changedScssSrc = file;
-        if(file.indexOf('\\') >= 0) {
-          pathObj.changedScssDir = file.substr(0,file.lastIndexOf('\\'));
-          pathObj.destDir = file.split('\\scss')[0] + '\\css';
-          pathObj.parentScssSrc = file.split('\\scss')[0] + '\\scss\\*.scss';
-        } else {
-          pathObj.changedScssDir = file.substr(0,file.lastIndexOf('/'));
-          pathObj.destDir = file.split('/scss')[0] + '/css';
-          pathObj.parentScssSrc = file.split('/scss')[0] + '/scss/*.scss';
-        }
+// gulp.task('watch', function(e) {
+//      return watch('htdocs/**/*.scss',{ ignoreInitial: true },function(){isProcess = false;})
+//       .on('change',function(file){
+//         pathObj.changedScssSrc = file;
+//         if(file.indexOf('\\') >= 0) {
+//           pathObj.changedScssDir = file.substr(0,file.lastIndexOf('\\'));
+//           pathObj.destDir = file.split('\\scss')[0] + '\\css';
+//           pathObj.parentScssSrc = file.split('\\scss')[0] + '\\scss\\*.scss';
+//         } else {
+//           pathObj.changedScssDir = file.substr(0,file.lastIndexOf('/'));
+//           pathObj.destDir = file.split('/scss')[0] + '/css';
+//           pathObj.parentScssSrc = file.split('/scss')[0] + '/scss/*.scss';
+//         }
 
-        if(isProcess == false){
-          gulp.start('scss');
-        }
+//         if(isProcess == false){
+//           gulp.start('scss');
+//         }
 
-      })
-      .on('add',function(file){
-        console.log('追加 : ' + file);
-      })
-      .on('unlink',function(file){
-        console.log('削除 : ' + file);
-      });
+//       })
+//       .on('add',function(file){
+//         console.log('追加 : ' + file);
+//       })
+//       .on('unlink',function(file){
+//         console.log('削除 : ' + file);
+//       });
 
-});
+// });
