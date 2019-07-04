@@ -1,7 +1,6 @@
 // ここから https://qiita.com/koba08/items/6484504bd90ca6fd5b91
 
 const gulp = require("gulp");
-const ssi = require("connect-ssi");
 const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
 const glob = require("gulp-sass-glob");
