@@ -1,3 +1,5 @@
+// ここから https://qiita.com/koba08/items/6484504bd90ca6fd5b91
+
 const gulp = require("gulp");
 const ssi = require("connect-ssi");
 const sass = require("gulp-sass");
@@ -13,13 +15,13 @@ const pngquant = require("imagemin-pngquant");
 const changed = require('gulp-changed');
 
 const paths = {
-	rootDir: "htdocs/",
-	scssSrc: "htdocs/assets/scss/**/*.scss",
-	jsSrc: "htdocs/assets/js/**/*.js",
-	imgSrc: "htdocs/assets/img/**/*",
+	rootDir: "source/",
+	scssSrc: "source/assets/scss/**/*.scss",
+	jsSrc: "source/assets/js/**/*.js",
+	imgSrc: "source/assets/img/**/*",
 	outCss: "htdocs/assets/css",
 	outJs: "htdocs/assets/js",
-	outImg: "htdocs/assets/",
+	outImg: "htdocs/assets/img",
 };
 
 
@@ -39,7 +41,6 @@ function sassFunc() {
 		sourcemaps: './sourcemaps'
 	})
 	.pipe(autoprefixer({
-		browsers: ["last 2 versions", "ie >= 11", "Android >= 4"],
 		cascade: false
 	}))
 	.pipe(gulp.dest(paths.outCss), {

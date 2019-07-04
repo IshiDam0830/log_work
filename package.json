@@ -35,5 +35,11 @@
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^7.0.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "browserslist":[
+    "last 3 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ]
 }
