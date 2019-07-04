@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/IshiDam0830/log_work/issues"
   },
-  "homepage": "https://github.com/IshiDam0830/log_work#readme"
+  "homepage": "https://github.com/IshiDam0830/log_work#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
