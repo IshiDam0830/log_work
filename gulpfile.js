@@ -14,32 +14,32 @@ const pngquant = require("imagemin-pngquant");
 const changed = require('gulp-changed');
 
 const paths = {
-  rootDir: "htdocs/",
-  scssSrc: "htdocs/assets/scss/**/*.scss",
-  jsSrc: "htdocs/assets/js/**/*.js",
-  imgSrc: "htdocs/assets/img/**/*",
-  outCss: "htdocs/assets/css",
-  outJs: "htdocs/assets/js",
-  outImg: "htdocs/assets/",
+	rootDir: "htdocs/",
+	scssSrc: "htdocs/assets/scss/**/*.scss",
+	jsSrc: "htdocs/assets/js/**/*.js",
+	imgSrc: "htdocs/assets/img/**/*",
+	outCss: "htdocs/assets/css",
+	outJs: "htdocs/assets/js",
+	outImg: "htdocs/assets/",
 };
 
 // browser sync
 function browserSyncFunc(done){
-  browserSync.init({
-	  server: {
-		  baseDir: paths.rootDir,
-		  middleware: [
+	browserSync.init({
+		server: {
+			baseDir: paths.rootDir,
+			middleware: [
 			ssi({
-			  baseDir: paths.rootDir,
-			  notify: false, //通知
-			  ext: ".html"
+				baseDir: paths.rootDir,
+				notify: false, //通知
+				ext: ".html"
 			})
-		  ]
-	  },
-	  port: 4000,
-	  reloadOnRestart: true
-  });
-  done();
+			]
+		},
+		port: 4000,
+		reloadOnRestart: true
+	});
+	done();
 }
 
 // sass
@@ -58,8 +58,8 @@ function sassFunc() {
 		sourcemaps: './sourcemaps'
 	})
 	.pipe(autoprefixer({
-	  browsers: ["last 2 versions", "ie >= 11", "Android >= 4"],
-	  cascade: false
+		browsers: ["last 2 versions", "ie >= 11", "Android >= 4"],
+		cascade: false
 	}))
 	.pipe(gulp.dest(paths.outCss), {
 		sourcemaps: './sourcemaps'
@@ -69,46 +69,46 @@ function sassFunc() {
 
 // js
 function jsFunc() {
-  return gulp.src(paths.jsSrc , {
+	return gulp.src(paths.jsSrc , {
 	sourcemaps: true
-  })
-  .pipe(plumber({
+	})
+	.pipe(plumber({
 	errorHandler: notify.onError('<%= error.message %>'),
-  }))
-  .pipe(babel())
-  .pipe(uglify({}))
-  .pipe(gulp.dest(paths.outJs));
+	}))
+	.pipe(babel())
+	.pipe(uglify({}))
+	.pipe(gulp.dest(paths.outJs));
 }
 
 // img
 function imgFunc() {
-  return gulp.src(paths.imgSrc)
-  .pipe(changed(paths.outImg))
-  .pipe(gulp.dest(paths.outImg))
-  .pipe(imagemin(
+	return gulp.src(paths.imgSrc)
+	.pipe(changed(paths.outImg))
+	.pipe(gulp.dest(paths.outImg))
+	.pipe(imagemin(
 	[
-	  mozjpeg({
+		mozjpeg({
 		quality: 80 //画像圧縮率
-	  }),
-	  pngquant()
+		}),
+		pngquant()
 	],
 	{
-	  verbose: true
+		verbose: true
 	}
-  ))
+	))
 }
 
 // watch
 function watchFunc(done) {
-  gulp.watch(paths.scssSrc, gulp.parallel(sassFunc));
-  gulp.watch(paths.jsSrc, gulp.parallel(jsFunc));
-  gulp.watch(paths.imgSrc, gulp.parallel(imgFunc));
-  done();
+	gulp.watch(paths.scssSrc, gulp.parallel(sassFunc));
+	gulp.watch(paths.jsSrc, gulp.parallel(jsFunc));
+	gulp.watch(paths.imgSrc, gulp.parallel(imgFunc));
+	done();
 }
 
-  // scripts tasks
+	// scripts tasks
 gulp.task('default',
 gulp.parallel(
-  browserSyncFunc, watchFunc, sassFunc, jsFunc,imgFunc
-  )
+	browserSyncFunc, watchFunc, sassFunc, jsFunc,imgFunc
+	)
 );
