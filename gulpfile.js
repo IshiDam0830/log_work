@@ -1,5 +1,4 @@
 const gulp = require("gulp");
-const browserSync = require("browser-sync");
 const ssi = require("connect-ssi");
 const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
@@ -23,24 +22,6 @@ const paths = {
 	outImg: "htdocs/assets/",
 };
 
-// browser sync
-function browserSyncFunc(done){
-	browserSync.init({
-		server: {
-			baseDir: paths.rootDir,
-			middleware: [
-			ssi({
-				baseDir: paths.rootDir,
-				notify: false, //通知
-				ext: ".html"
-			})
-			]
-		},
-		port: 4000,
-		reloadOnRestart: true
-	});
-	done();
-}
 
 // sass
 function sassFunc() {
@@ -64,7 +45,6 @@ function sassFunc() {
 	.pipe(gulp.dest(paths.outCss), {
 		sourcemaps: './sourcemaps'
 	})
-	.pipe(browserSync.stream());
 }
 
 // js
@@ -109,6 +89,6 @@ function watchFunc(done) {
 	// scripts tasks
 gulp.task('default',
 gulp.parallel(
-	browserSyncFunc, watchFunc, sassFunc, jsFunc,imgFunc
+	watchFunc, sassFunc, jsFunc,imgFunc
 	)
 );
