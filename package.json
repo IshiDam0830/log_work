@@ -17,7 +17,18 @@
   },
   "homepage": "https://github.com/IshiDam0830/log_work#readme",
   "devDependencies": {
+    "autoprefixer": "^9.6.0",
     "gulp": "^4.0.2",
-    "gulp-sass": "^4.0.2"
-  }
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-watch": "^5.0.1",
+    "minimist": "^1.2.0",
+    "plumber": "^0.4.8",
+    "postcss-reporter": "^6.0.1",
+    "postcss-scss": "^2.0.0",
+    "stylelint": "^10.1.0"
+  },
+  "dependencies": {}
 }
