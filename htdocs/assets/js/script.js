@@ -1,1 +1,1 @@
-"use strict";var changableName="dem",name=changableName;function changeNameTest(){console.log("const: change")}console.log("変更可能:"+changableName),console.log("変更不可:"+name),changeNameTest(),console.log("変更後"+name);
+"use strict";window.addEventListener("load",function(){var t=document.getElementById("button"),e=document.getElementsByClassName("js-target");t.addEventListener("click",function(){console.log("const: change"),e[0].textContent="dem"})});

@@ -1,0 +1,1 @@
+"use strict";window.addEventListener("load",function(){var t=document.getElementById("button");document.getElementsByClassName("js-target");t.addEventListener("click",function(){})});

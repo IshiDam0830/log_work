@@ -17,7 +17,7 @@ const changed = require('gulp-changed');
 const paths = {
 	rootDir: "source/",
 	scssSrc: "source/assets/scss/**/*.scss",
-	jsSrc: "source/assets/js/**/*.js",
+	jsSrc: "source/assets/js/*.js",
 	imgSrc: "source/assets/img/**/*",
 	outCss: "htdocs/assets/css",
 	outJs: "htdocs/assets/js",
