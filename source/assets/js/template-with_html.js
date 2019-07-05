@@ -10,6 +10,7 @@ window.addEventListener('load', function(){
 		//ここまでためすこーど
 	}
 
+
 	$triggerBtn.addEventListener('click', function(){
 		run_code();
 	});
