@@ -1,0 +1,1 @@
+"use strict";var changableName="dem",name=changableName;function changeNameTest(){console.log("const: change")}console.log("変更可能:"+changableName),console.log("変更不可:"+name),changeNameTest(),console.log("変更後"+name);
