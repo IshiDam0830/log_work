@@ -1,0 +1,1 @@
+"use strict";var year=2015,cont=2015==year;cont&&console.log("You are right!");
