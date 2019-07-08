@@ -1,1 +1,6 @@
-# npm系のプッシュが終わったらcssレギュ参考に書く
+.DS_Store
+.sass-cache
+Thumbs.db
+
+# eclipse project files
+node_modules
