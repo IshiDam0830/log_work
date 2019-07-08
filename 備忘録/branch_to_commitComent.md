@@ -12,5 +12,5 @@
 	#Insert Issue ID at the beginning of the commit message if it doesn't exist
 	if [ ! `grep "$issue_id" $1` ]; then
 		sed -i -e '1 s@\(.*\)@'"${current_branch}"' \1@' $1
-	fipush
+	fi
 
