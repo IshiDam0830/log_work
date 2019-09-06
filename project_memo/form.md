@@ -4,6 +4,14 @@ tags:
   - js
 ---
 
+## 参考にしたリンク
+- http://webpro-git01.internal-gmo/creative/help.onamae.com/blob/master/htdocs/contact/confirm/index.php
+- http://webpro-git01.internal-gmo/creative/support.conoha.jp/blob/master/htdocs/api/postSf.php
+- https://kcw.kddi.ne.jp/#!rid42449273-1220267896874225664
+
+
+
+
 ## PHP部分
 - 未定義でエラーを吐き出すのをよくやらかした
 
@@ -18,7 +26,7 @@ tags:
 	- [公式] https://www.php.net/manual/ja/reserved.variables.httpresponseheader.php
 		> $http_response_header 配列は get_headers() 関数と似ています。 HTTP ラッパー を使用する際に、$http_response_header に HTTP レスポンスヘッダが格納されます。 $http_response_header は ローカルスコープ で作成されます。
 
-- phpの判定周り
+### phpの判定周り
 > if(!$data['result'] == true){
 > $data['result']の結果を判定させた上で比較させている理由が不明です。
 > 例えば、`$data['result']`がfalseだった場合、
