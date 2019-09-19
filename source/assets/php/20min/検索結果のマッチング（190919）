@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>2019年9月19日</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style>
+
+	</style>
+</head>
+<body>
+<?php 
+/*
+検索キーワードが
+
+「メール 設定 サーバー」
+
+の3つのキーワードのみの場合に「マッチした」を表示する処理。
+
+※ スペースは半角・全角の場合あり。
+※ 3つのキーワード以外が入って来た場合はNG。
+※ 3つのキーワードは順不同。
+
+余裕があればフォーム画面になってるとうれしいかも。
+*/
+
+$is_match = false;
+$value = '';
+$search = '';
+$text_array = ['メール', '設定', 'サーバー'];
+$text_array_count = count($text_array);
+
+
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+	$search = filter_input(INPUT_POST, 'search');
+	$search = str_replace('　', ' ', $search);
+	$searchArray = explode(' ', $search);
+	print_r($searchArray);
+	$diff = array_diff($searchArray, $text_array);
+}
+if(empty($diff)){
+	if($text_array_count == count($searchArray)){
+		$is_match = true;
+	}
+}
+
+$resultText = ($is_match == true) ? '検索結果：マッチした' : '検索結果：ないよ';
+?>
+
+<form method="post" name="form">
+	<p>検索</p>
+	<input type="text" name="search" value="">
+	<input type="submit">
+</form>
+<p><?php echo '検索内容：'.$search; ?></p>
+<p><?php echo $resultText; ?></p>
+
+</body>
+</html>
