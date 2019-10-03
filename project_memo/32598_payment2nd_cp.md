@@ -25,6 +25,28 @@ https://www.onamae-server.com/rs/wordpress/
 https://www.onamae-server.com/sslcp/
 
 
+### テスト
+https://www.onamae-server2.test/
+https://www.onamae-server2.test/flow/
+https://www.onamae-server2.test/navi/
+https://www.onamae-server2.test/rs/
+https://www.onamae-server2.test/rs/affiliate/
+https://www.onamae-server2.test/rs/domain/
+https://www.onamae-server2.test/rs/exo/
+https://www.onamae-server2.test/rs/function/
+https://www.onamae-server2.test/rs/howorder/
+https://www.onamae-server2.test/rs/keni/
+https://www.onamae-server2.test/rs/price/
+https://www.onamae-server2.test/rs/sitelock/
+https://www.onamae-server2.test/rs/ssl/
+https://www.onamae-server2.test/rs/ssl_chrome68/
+https://www.onamae-server2.test/rs/webfont/
+https://www.onamae-server2.test/rs/webfont/sample/
+https://www.onamae-server2.test/rs/weebly/
+https://www.onamae-server2.test/rs/wordpress/
+https://www.onamae-server2.test/sslcp/
+
+
 ### ローカル
 https://www.onamae-server.com.local:58076/
 https://www.onamae-server.com.local:58076/flow/
