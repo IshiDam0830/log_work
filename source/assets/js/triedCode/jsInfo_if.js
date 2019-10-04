@@ -7,7 +7,7 @@ if (cont){
 	console.log('How can you be so wrong?');
 }
 
-let accessAllowed = 18;
+let accessAllowed = 12;
 let age = Math.floor(Math.random()*(40 + 1 - 5)) + 5;
 let messageAllow = 'get away!';
 
@@ -16,4 +16,6 @@ if(age < 18){
 }else{
 	messageAllow = 'you allowed';
 }
-console.log('you are '+age + '!' +messageAllow);
+console.log('you are '+age + '! ' +messageAllow);
+
+
