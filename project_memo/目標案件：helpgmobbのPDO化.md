@@ -11,7 +11,8 @@ tags:
 ## PHPのDB連携系メモ
 ### 【PHP超入門】クラス～例外処理～PDOの基礎(https://qiita.com/7968/items/6f089fec8dde676abb5b)
 - 旧：$link = mysql_connect('ホスト名', 'ユーザー名', 'パスワード');
-- 新：
+- 新：$dbh = new PDO('DSN','ユーザー名','パスワード',オプション);
+	- $dbh = new PDO('mysql:host=サーバー名;dbname=データベース名;charset=文字エンコード','ユーザー名','パスワード',オプション);
 - 
 
 <!--  -->
