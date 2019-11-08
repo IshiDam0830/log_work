@@ -17,7 +17,7 @@ tags:
 
 
 ## memo
-- mysql_connect
+- mysql_connect（PHP 5.5.0で非推奨、PHP 7.0.0で削除）
 	- 使用ファイル： /library/mysql.inc
 	- mysql.incが読み込まれている
 		- /library/common_db_contact_select.php
