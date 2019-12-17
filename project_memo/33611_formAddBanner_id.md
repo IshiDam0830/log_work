@@ -12,3 +12,5 @@ if(isset($banner_id) && preg_match('/1060_rtg_/', $banner_id)): ?>
 
 
 https://www.onamae.local:58078/campaign/trial3/?mail&banner_id=1060_rtg_111
+
+htmlspecialchars($service_name, ENT_QUOTES, 'utf-8');
