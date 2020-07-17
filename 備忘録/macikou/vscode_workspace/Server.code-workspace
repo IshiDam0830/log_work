@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "/Users/usr0102691/Project/creative-vm/git_data/www.onamae-server.com"
+		}
+	],
+	"settings": {
+		"workbench.colorCustomizations": {
+		"titleBar.activeBackground": "#550070",
+		"titleBar.activeForeground": "#fff",
+		"activityBar.background": "#550070",
+		"activityBar.foreground": "#fff"
+		}
+	}
+}

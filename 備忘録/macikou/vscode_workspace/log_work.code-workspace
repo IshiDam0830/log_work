@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "/Users/usr0102691/Project/log_work"
+		}
+	],
+	"settings": {
+		"workbench.colorTheme": "Monokai",
+		"editor.detectIndentation": false,
+		"editor.insertSpaces": false,
+		"workbench.colorCustomizations": {
+			"titleBar.activeBackground": "#59B89B",
+			"titleBar.activeForeground": "#fff",
+			"activityBar.background": "#59B89B",
+			"activityBar.foreground": "#fff"
+		},
+		"breadcrumbs.icons": false
+	}
+}

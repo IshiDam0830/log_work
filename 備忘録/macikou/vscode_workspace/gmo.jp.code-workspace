@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "/Users/usr0102691/Project/creative-vm/git_data/gmo.jp"
+		}
+	],
+	"settings": {
+		//#06469B
+		"workbench.colorCustomizations": {
+			"titleBar.activeBackground": "#06469B",
+			"titleBar.activeForeground": "#fff",
+			"activityBar.background": "#06469B",
+			"activityBar.foreground": "#fff"
+		}
+	}
+}
