@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "/Users/usr0102691/Project/creative-vm/git_data/gmobb.jp"
+		}
+	],
+	"settings": {
+		"workbench.colorCustomizations": {
+			"titleBar.activeBackground": "#FD3684",
+			"titleBar.activeForeground": "#fff",
+			"activityBar.background": "#FD3684",
+			"activityBar.foreground": "#fff"
+		}
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "/Users/usr0102691/Project/creative-vm/git_data/onamae.com"
+		}
+	],
+	"settings": {
+		"editor.insertSpaces": false,
+		"editor.detectIndentation": false,
+		
+		"workbench.colorCustomizations": {
+			"titleBar.activeBackground": "#a7000b",
+			"titleBar.activeForeground": "#fff",
+			"activityBar.background": "#a7000b",
+			"activityBar.foreground": "#fff"
+		}
+	}
+
+	
+}

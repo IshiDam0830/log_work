@@ -17,4 +17,5 @@
 		- source->htdocs
 
 
-## 
+## JS実行
+- ターミナルで `node filepath`

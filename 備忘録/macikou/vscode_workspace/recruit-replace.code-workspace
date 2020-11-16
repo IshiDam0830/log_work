@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "/Users/usr0102691/Project/creative-vm/git_data/recruit.gmo.jp"
+		}
+	],
+	"settings": {
+		//#005bac;
+		"workbench.colorCustomizations": {
+			"titleBar.activeBackground": "#005bac",
+			"titleBar.activeForeground": "#fff",
+			"activityBar.background": "#005bac",
+			"activityBar.foreground": "#fff"
+		}
+	}
+}

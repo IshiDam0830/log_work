@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "/Users/usr0102691/Project/creative-vm/git_data/conoha.jp"
+		}
+	],
+	"settings": {
+		"workbench.colorCustomizations": {
+			"titleBar.activeBackground": "#12b8d7",
+			"titleBar.activeForeground": "#fff",
+			"activityBar.background": "#12b8d7",
+			"activityBar.foreground": "#fff"
+		},
+		"breadcrumbs.icons": false
+	}
+}
