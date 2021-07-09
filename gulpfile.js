@@ -94,7 +94,8 @@ function watchFunc(done) {
 	// scripts tasks
 gulp.task('default',
 gulp.parallel(
-	watchFunc, sassFunc, jsFunc
+	// watchFunc, sassFunc, jsFunc
+	watchFunc, jsFunc
 	// imgFunc停止解除したら追記
 	)
 );

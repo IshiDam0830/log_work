@@ -20,7 +20,7 @@
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "babel-loader": "^8.0.5",
-    "browser-sync": "^2.26.5",
+    "browser-sync": "^2.27.4",
     "connect-ssi": "^1.1.1",
     "gulp": "^4.0.1",
     "gulp-autoprefixer": "^6.1.0",
