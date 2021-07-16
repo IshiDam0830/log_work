@@ -3,7 +3,13 @@ tags:
   - conoha
 ---
 
+
+<?php echo $mineSemi->writeBoxImg('./images/1.webp'); ?>
+
 メタ情報系：htdocs/vps/media/mine-semi/common/includes/class.php
+
+茶文字
+<strong class="textColor-brown textBold"></strong>
 
 赤文字
 <strong class="textColor-important textBold"></strong>
@@ -39,3 +45,6 @@ tags:
 		<p>IPアドレスを入力する際は「〇〇〇.〇〇〇.〇〇〇.〇〇〇」の数字の間の.<strong class="textColor-brown textBold">（ピリオド）</strong>も忘れずに入力しましょう。<br>コピーペーストを使用すると入力ミスがなくなりますのでオススメです。</p>
 	</dd>
 </dl>
+
+
+recommended-server

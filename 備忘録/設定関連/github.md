@@ -1,0 +1,2 @@
+個人トークン
+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
